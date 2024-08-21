@@ -1,6 +1,6 @@
 # pyls
 
-Simple version of ls program for process illustration.
+Simple version of ls program for process illustration for python beginners.
 
 The `pyls` program  lists the entries in a directory with the output format
 controlled through a small set of command line flags.
