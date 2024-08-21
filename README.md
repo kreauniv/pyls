@@ -2,6 +2,8 @@
 
 Simple version of ls program for process illustration for python beginners.
 
+[Video link of work-through](https://drive.google.com/file/d/1XwSS7JaLEJe_biDUQ1qrz7yaSNZwbaGI/view?usp=drive_link).
+
 The `pyls` program  lists the entries in a directory with the output format
 controlled through a small set of command line flags.
 
