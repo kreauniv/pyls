@@ -1,19 +1,30 @@
 import os
 import sys
+import argparse
 
 
-def main(argv):
+parser = argparse.ArgumentParser(
+    prog="pyls", description="Lists contents of given directory or the pwd"
+)
+
+parser.add_argument(
+    "dirname",
+    action="store",
+    help="Optional directory name to list.",
+    nargs="?",
+    default=".",
+)
+
+
+def main():
     """
     When given one argument, takes it to be a dirname and
     prints its listing. When given no arguments, assumes
     the directory being referred to is the current working
     directory.
     """
-    if len(argv) > 0:
-        dirname = argv[0]
-    else:
-        dirname = "."
-    print_listing(dirname)
+    args = parser.parse_args()
+    print_listing(args.dirname)
 
 
 def print_listing(dirname):
@@ -40,4 +51,4 @@ def get_directory_listing(dirname):
 
 
 if __name__ == "__main__":
-    main(sys.argv[1:])
+    main()
